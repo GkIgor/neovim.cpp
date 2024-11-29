@@ -30,3 +30,46 @@
 *.exe
 *.out
 *.app
+
+# Diretórios de build
+/build/
+**/build/
+
+# Arquivos temporários do CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Makefile
+cmake_install.cmake
+install/
+
+# Arquivos de compilação
+*.o
+*.obj
+*.so
+*.a
+*.lib
+*.dll
+*.dylib
+*.exe
+
+# Arquivos de log de compilação
+*.log
+
+# Arquivos de backup do editor
+*~
+*.bak
+*.swp
+
+# Arquivos do sistema
+.DS_Store
+
+# Diretórios específicos de IDEs (caso esteja usando algum)
+.idea/
+.vscode/
+
+# Arquivos gerados pelo Visual Studio Code
+.vscode/
+
+# Arquivos do JetBrains (WebStorm, CLion, etc)
+.idea/
