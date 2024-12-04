@@ -74,3 +74,5 @@ install/
 # Arquivos do JetBrains (WebStorm, CLion, etc)
 .idea/
 Makefile
+Makefile
+neovim-clone

@@ -4,19 +4,45 @@ namespace input
 {
   void readKeyPress()
   {
-    char ch;
+    char ch{};
 
-    while (true)
+    char buffer[3];
+
+    while (ch != 'q')
     {
-      ssize_t bytesRead = read(STDIN_FILENO, &ch, 1);
-      if (bytesRead == 1)
+      ssize_t bytesRead = read(STDIN_FILENO, &buffer, 4);
+      std::cout << "I: " << buffer << std::endl;
+
+      if (bytesRead > 1)
       {
-        std::cout << ch << std::endl;
-        if (ch == 'q')
+        if (isLeftBracket(buffer))
         {
-          break;
+          /* code */
         }
       }
+    }
+  }
+
+  bool isLeftBracket(std::array<char, 3> &c)
+  {
+    for (auto ch : c)
+    {
+    }
+  }
+
+  std::string getCharType(CharType c)
+  {
+    switch (c)
+    {
+    case CharType::ESC:
+      return "ESC";
+      break;
+    case CharType::LB:
+      return "LB";
+      break;
+
+    default:
+      break;
     }
   }
 } // namespace input

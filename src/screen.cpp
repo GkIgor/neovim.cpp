@@ -5,9 +5,12 @@ namespace screen
   void setRawMode()
   {
     struct termios term;
+    struct termios oldTerm = term;
 
     tcgetattr(STDIN_FILENO, &term);
-    struct termios oldTerm = term;
+
+
+
     cfmakeraw(&term);
     tcsetattr(STDIN_FILENO, TCSANOW, &term);
   }
